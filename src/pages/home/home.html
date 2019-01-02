@@ -7,12 +7,14 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>home</ion-title>
+    <ion-title>嗨电脑</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+  <ion-slides class='indexSlide' pager=true autoplay=2000 loop=true effect='slide' speed=1000>
+    <ion-slide *ngFor='let tmp of carouselImgs'><img [src]='tmp.img' alt=""></ion-slide>
+  </ion-slides>
 </ion-content>
