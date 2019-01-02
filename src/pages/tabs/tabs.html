@@ -1,5 +1,6 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="About" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="tab3Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+  <ion-tab [root]="handleHome" tabTitle="首页" tabIcon="home"></ion-tab>
+  <ion-tab [root]="handleSearch" tabTitle="搜索" tabIcon="search"></ion-tab>
+  <ion-tab [root]='handleCart' tabTitle='购物车' tabIcon='cart'></ion-tab>
+  <ion-tab [root]="handleUser" tabTitle="个人中心" tabIcon="person"></ion-tab>
 </ion-tabs>
