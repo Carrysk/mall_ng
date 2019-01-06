@@ -6,15 +6,64 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>嗨电脑</ion-title>
+  <ion-navbar class='navSearch' color='blue'>
+    <button class='btn' ion-button clear small>嗨货</button>
+    <button class='search' ion-button small full round color='white' (click)='handleSearch()'>
+      <ion-icon name='search' class='left'></ion-icon >
+      <span class='right'>iPhone</span>
+    </button>
+    <button class='btn' ion-button small clear (click)='handleLogin()'>登录
+    </button>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <ion-slides class='indexSlide' pager=true autoplay=2000 loop=true effect='slide' speed=1000>
-    <ion-slide *ngFor='let tmp of carouselImgs'><img [src]='tmp.img' alt=""></ion-slide>
+  <!--  首页轮播图 -->
+  <ion-slides *ngIf='carouselImgs' class='indexSlide' autoplay=2000 pager=true loop=true effect=slide speed=1000>
+    <ion-slide *ngFor='let tmp of carouselImgs'><img [src]='tmp.img'></ion-slide>
   </ion-slides>
+  <!--  -->
+  <h4 class='item-title rush-product-title'>嗨货秒杀
+    <span class='round'>20:00场</span>
+    <span class='count-down'><em>1</em>:<em>1</em>:<em>1</em></span>
+  </h4>
+  <ion-scroll class='common rush' scrollX=true *ngIf='rushProducts'>
+    <ion-card class='rush-product' *ngFor='let tmp of rushProducts'>
+      <ion-card-header><img [src]='tmp.pic'></ion-card-header>
+      <ion-card-content>
+        <h5 class='text-over'>{{tmp.title}}</h5>
+        <p class='price'>￥<em>{{tmp.price.toFixed(2)}}</em></p>
+      </ion-card-content>
+    </ion-card>
+  </ion-scroll>
+  <h4 class='item-title'>商品推荐</h4>
+  <ion-grid>
+    <ng-container *ngFor='let tmp of recProduct;let i=index'>
+      <ion-row *ngIf='i%2==0'>
+        <ion-col class='product-item'>
+          <div class='product-item-title'>
+            <h3>{{recProduct[i].title}}</h3>
+            <p>{{recProduct[i].det}}</p>
+          </div>
+          <div class='product-item-pic'>
+            <img [src]="recProduct[i].pic">
+          </div>
+        </ion-col>
+        <ion-col class='product-item'>
+          <div class='product-item-title'>
+            <h3>{{recProduct[i+1].title}}</h3>
+            <p>{{recProduct[i+1].det}}</p>
+          </div>
+          <div class='product-item-pic'>
+            <img [src]="recProduct[i+1].pic">
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ng-container>
+
+  </ion-grid>
+
 </ion-content>

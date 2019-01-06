@@ -18,6 +18,8 @@ import { DetailPage } from '../pages/detail/detail';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NotFoundPage } from '../pages/not-found/not-found';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NotFoundPage } from '../pages/not-found/not-found';
     SearchPage,
     UserCenterPage,
     DetailPage,
-    NotFoundPage
+    NotFoundPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { NotFoundPage } from '../pages/not-found/not-found';
     SearchPage,
     UserCenterPage,
     DetailPage,
-    NotFoundPage
+    NotFoundPage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     StatusBar,

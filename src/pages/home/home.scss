@@ -1,5 +1,154 @@
 page-home {
-  .indexSilde{
-    height: 200px;
+  .navSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .btn{
+      display: inline-block;
+      color: #fff;
+    }
+    .search{
+      width: 70%;
+      display: inline-block;
+      position: relative;
+      color: #999;
+      .left{
+        position: absolute;
+        margin-left: 1rem;
+        left: 0;
+      }
+      .right{
+        position: absolute;
+        left: 3rem;
+      }
+    }
+  }
+
+  .indexSlide {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .item-title {
+    margin: 0.4rem 0.5rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+    border-left: 2px solid $blue;
+    font-weight: bold;
+    background: #fff;
+  }
+
+  .common {
+    padding: 0;
+    margin: 0;
+  }
+
+  .text-over {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis
+  }
+
+  .rush-product-title {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+
+    .round {
+      display: inline-block;
+      margin: 0 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      height: 1.5rem;
+      color: #333;
+    }
+
+    .count-down {
+      font-size: 1rem;
+
+      em {
+        font-weight: normal;
+        display: inline-block;
+        margin: 0 0.3rem;
+        width: 1.5rem;
+        border: 1px solid #999;
+        text-align: center;
+        border-radius: 3px;
+      }
+    }
+
+  }
+
+  .rush {
+    height: 170px;
+    white-space: nowrap;
+
+    .rush-product {
+      display: inline-block;
+      width: 27%;
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+
+    .text-over {
+      font-size: 1.2rem;
+    }
+
+    .price {
+      color: #f60;
+      font-size: 0.5rem;
+
+      em {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // product item 推荐
+  .product-item {
+    display: flex;
+    border: 1px solid transparent;
+    border-top: 1px solid #f9f9f9;
+    border-left: 1px solid #f9f9f9;
+    border-radius: 3px;
+    height: 50%;
+    overflow: hidden;
+    justify-content: space-around;
+
+    .product-item-title {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        word-wrap: nowrap;
+      }
+
+      p {
+        line-height: 1.2rem;
+        font-size: 1rem;
+        color: #f80;
+        word-wrap: nowrap;
+
+      }
+    }
+
+    .product-item-pic {
+      padding: 4px;
+      overflow: hidden;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+
+  .product-item+.product-item {
+    border-right: 1px solid #f9f9f9;
   }
 }
